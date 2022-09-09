@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
+import Box from '@mui/material/Box';
+import JHeader from './components/JHeader'
+import Card from './components/Card'
+import useLocations from './hooks/useLocations';
+import JLocation from './components/JLocation';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const {
+        data: location,
+        requestData,
+        characters } = useLocations()
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    const renderCards = ()=>{
+        console.log("CANTIDAD DE PERSONAJES")
+        console.log(characters);
+        if(characters.length>0)
+            return characters?.map(character => <Card key={character.id} character={character} />)
+        else
+            return (<h2>No informstion to show!</h2>)
+    }
+
+
+    return (<div className="App">
+        <JHeader />
+        <main>
+            <JLocation location={location} random={requestData} />
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-evenly',
+                    gap: '1rem',
+                    padding: '0 2rem',
+                    '& > :not(style)': {
+                        m: 1,
+                        width: '15rem',
+                        height: '30rem',
+                    },
+                }}
+            >
+                {
+                    renderCards()
+                }
+
+            </Box>
+        </main>
+    </div>)
 }
 
 export default App

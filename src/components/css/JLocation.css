@@ -1,0 +1,14 @@
+
+.location__data{
+    display: flex;
+    flex-flow: row nowrap;
+    gap:5rem;
+    list-style: none;
+    justify-content: space-evenly;
+
+    color: #FBFBFB;
+}
+
+.location__data li{
+    text-align: left;
+}

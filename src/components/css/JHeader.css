@@ -1,0 +1,12 @@
+
+.cover-page{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-image: url('../../assets/img/633288.png');
+    background-size: cover;
+
+    height: 30vh;
+}
