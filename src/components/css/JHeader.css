@@ -22,14 +22,5 @@
 }
 
 .img1{
-    background-image: url('./src/assets/img/633288.png');
-}
-.img2{
-    background-image: url('./src/assets/img/633294.png');
-}
-.img3{
-    background-image: url('./src/assets/img/796108.jpg');
-}
-.img4{
-    background-image: url('./src/assets/img/909641.png');
+    display: none;
 }

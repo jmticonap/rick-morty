@@ -1,5 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './css/JHeader.css'
+import Img1 from "../assets/img/633288.png"
+import Img2 from "../assets/img/633294.png"
+import Img3 from "../assets/img/796108.jpg"
+import Img4 from "../assets/img/909641.png"
+
 import Fab from '@mui/material/Fab'
 import Shuffleicon from '@mui/icons-material/Shuffle'
 import JInputText from './JInputText'
@@ -25,6 +30,10 @@ const JHeader = ({call, floatting}) => {
 
     return (
         <header className={`cover-page ${floatting?'cover-page_static':''}`} style={{backgroundImage: `url(${currentBg})`}}>
+            <img className='img1' src="./src/assets/img/633288.png" alt="" />
+            <img className='img1' src="./src/assets/img/633294.png" alt="" />
+            <img className='img1' src="./src/assets/img/796108.jpg" alt="" />
+            <img className='img1' src="./src/assets/img/909641.png" alt="" />
             <JInputText onSearch={call} />
             <Fab
                 style={{position:'relative', bottom:'-4.5rem', right:'-16.75rem'}} 
