@@ -20,11 +20,11 @@ const Card = ({character}) => {
                     <div className='card__data'>
                         <ul>
                             <li><h2>{character?.name}</h2><hr /> </li>
-                            <li><h5>RAZA</h5></li>
+                            <li><h5>SPECIE</h5></li>
                             <li>{character?.species}</li>
-                            <li><h5>ORIGEN</h5></li>
+                            <li><h5>ORIGIN</h5></li>
                             <li>{character?.origin.name}</li>
-                            <li><h5>AṔARICIÓN EN EPISODIOS</h5></li>
+                            <li><h5>APPEARE QUANTITY</h5></li>
                             <li>{character?.episode.length}</li>
                         </ul>
                     </div>

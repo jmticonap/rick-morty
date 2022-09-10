@@ -4,10 +4,11 @@ import Paper from '@mui/material/Paper';
 import Fab from '@mui/material/Fab';
 import Shuffleicon from'@mui/icons-material/Shuffle'
 
-const JLocation = ({location, random}) => {
+const JLocation = ({location}) => {
     return (
         <Paper elevation={6} sx={{
             overflow: 'hidden',
+            maxWidth: '90vw',
             backgroundColor: 'var(--card-background)', 
             borderRadius: '0.5rem', 
             padding: '2rem 8rem'}}>
@@ -27,11 +28,6 @@ const JLocation = ({location, random}) => {
                 <li>
                     <h2>Population:</h2>
                     <p>{location.residents?.length}</p>
-                </li>
-                <li>
-                    <Fab color='success' onClick={random}>
-                        <Shuffleicon />
-                    </Fab>
                 </li>
             </ul>
         </Paper>

@@ -1,0 +1,11 @@
+
+.paginator__btns-row {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    list-style: none;
+}
